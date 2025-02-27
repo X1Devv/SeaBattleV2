@@ -10,7 +10,7 @@ namespace Agar.io_sfml.Game.Scripts.GameRule
     {
         public GameLoop CreateGameLoop()
         {
-            var config = LoadConfig();
+            var config = _configLoader.Load();
             var window = CreateWindow();
             var textureManager = new TextureManager();
             var gameController = new GameController(window, config, textureManager);
